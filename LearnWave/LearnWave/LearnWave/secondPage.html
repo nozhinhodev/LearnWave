@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LearnWave</title>
+  <link rel="stylesheet" href="./styles/main.css">
+  <script src="./js.js"></script>
+</head>
+<body>
+
+<div class="nav">
+  <div class="logo">
+    <img src="./assets/logo.png" alt="" class="lg">
+  </div>
+</div>
+
+
+<div class="main__cont">
+  <!-- sc_b is pick input and label of quiz
+  -->
+  <button id="myButton" class="myButton">выбор направления</button>
+  <div id="block1" class="block_margin">
+    Менеджмент <a href="./managementPage.html"><button class="myButton1">Выбрать</button></a>
+  </div>
+  <div id="block2" class="block_margin">
+    Data Science <a href="./dataSciencePage.html"><button class="myButton1">Выбрать</button></a>
+  </div>
+
+</div>
+
+<style>
+  #myButton,.myButton, .myButton1 {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  .myButton1{
+    margin-left: 10px;
+  }
+  #block1, #block2 {
+    display: none;
+    padding: 20px;
+    background-color: lightblue;
+    width: 300px;
+    font-weight: 700;
+  }
+
+  .block_margin{
+    margin-top: 1%;
+  }
+</style>
+
+<script>
+
+document.getElementById('myButton').onclick = function() {
+    const block1 = document.getElementById('block1');
+    const block2 = document.getElementById('block2');
+
+    if (block1.style.display !== 'none') {
+        block1.style.display = 'none';
+        block2.style.display = 'none';
+    } else {
+        block1.style.display = 'block';
+        block2.style.display = 'block';
+    }
+}
+
+
+</script>
+</body>
+</html>
